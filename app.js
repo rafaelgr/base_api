@@ -15,8 +15,9 @@ app.use(Cors());
 app.use('/version', require('./api/version/version_controller'));
 
 const server = app.listen(process.env.BASE_PORT, () => {
-    console.log(Pack.name + " VRS: " + Pack.version);
-    console.log("Listening on port " + server.address().port + "...");
+    Winston.info(Pack.name + " VRS: " + Pack.version);
+    Winston.info("Listening on port " + server.address().port + "...");
+    Winston.error("This is an error");
 });
 
 module.exports = server;
