@@ -26,6 +26,9 @@ coverage
 # Bower dependency directory (https://bower.io/)
 bower_components
 
+# Dont push env variables
+.env
+
 # node-waf configuration
 .lock-wscript
 
