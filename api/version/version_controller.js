@@ -1,3 +1,4 @@
+"use strict";
 const Express = require('express');
 const Pack = require('../../package.json');
 

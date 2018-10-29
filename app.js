@@ -1,3 +1,4 @@
+"use strict";
 const Express = require('express');
 const Cors = require('cors');
 const Dotenv = require('dotenv');
