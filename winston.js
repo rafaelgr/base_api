@@ -1,11 +1,14 @@
 "use strict";
 var appRoot = require('app-root-path');
 var winston = require('winston');
+var dotenv = require('dotenv');
+
+dotenv.config();
 
 // define the custom settings for each transport (file, console)
 var options = {
   file: {
-    level: 'info',
+    level: process.env.BASE_WINSTON_FILELEVEL || 'info',
     filename: `${appRoot}/logs/app.log`,
     handleExceptions: true,
     json: true,
@@ -14,7 +17,7 @@ var options = {
     colorize: false,
   },
   console: {
-    level: 'debug',
+    level: process.env.BASE_WINSTON_CONSOLELEVEL || 'debug',
     handleExceptions: true,
     json: false,
     colorize: true,
